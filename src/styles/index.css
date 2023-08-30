@@ -1,0 +1,167 @@
+/**
+* ! style rules for sectionOne 
+**/
+.sectionOne__left--text {
+    font-size: var(--body);
+    color: var(--color-white-75);
+    font-family: var(--font-2);
+}
+
+.sectionOne__left--btn {
+    align-self: self-start;
+    margin-top: 20px;
+}
+
+/**
+* ! style rules for sectionTwo 
+**/
+.sectionTwo {
+    padding: 50px 0;
+    display: grid;
+    gap: 30px;
+}
+.sectionTwo__content--text {
+    font-size: var(--sub);
+    font-family: var(--font-2);
+}
+.sectionTwo__logo {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sectionTwo__logo img {
+    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+}
+
+.sectionTwo__btn {
+    justify-self: center;
+}
+@media (max-width: 1024px) {
+    .sectionTwo__logo {
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+        margin: 5px;
+    }
+}
+@media (max-width: 768px) {
+    .sectionTwo__logo {
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        margin: 5px;
+    }
+}
+@media (max-width: 568px) {
+    .sectionTwo__logo {
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        margin: 5px;
+    }
+}
+
+/**
+* ! style rules for sectionThree 
+**/
+.sectionThree__right--text{
+    color: var(--color-dark-50);
+    font-family: var(--font-2);
+    font-size: var(--body);
+}
+.sectionThree__right--btn {
+    align-self: self-start;
+}
+
+/**
+* ! style rules for sectionFour 
+**/
+.sectionFour__right--text{
+    color: var(--color-dark-50);
+    font-family: var(--font-2);
+    font-size: var(--body);
+}
+.sectionFour__right--btn {
+    align-self: self-start;
+}
+
+
+/**
+* ! style rules for sectionFive 
+**/
+.sectionFive {
+    padding: 40px 0;
+    display: grid;
+    gap: 30px;
+}
+.sectionFive__content--text {
+    font-size: var(--sub);
+    font-family: var(--font-2);
+}
+.sectionFive__cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+[class^="sectionFive__card--"] {
+    box-shadow : var(--shadow-1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    border-radius: 5px;
+    gap: 15px;
+    transition: .5s;
+}
+/* [class^="sectionFive__card--"]:hover {
+    padding: 13px 17px;
+} */
+
+[class^="sectionFive__card--"] .name {
+    font-family: var(--font-1);
+    font-size: var(--h5);
+    font-weight: bold;
+    
+}
+[class^="sectionFive__card--"] .position {
+    font-family: var(--font-2);
+    color: var(--color-dark-75);
+    text-transform: uppercase;
+} 
+
+.sectionFive__btn {
+    justify-self: center;
+}
+
+/* 
+ ! adding media queries 
+*/
+
+/* @media (max-width: 1024px) {
+    .sectionFive__cards {
+        grid-template-columns: repeat(4,1fr);
+    }
+} */
+@media (max-width: 768px) {
+    .sectionOne__right {
+        order: 0;
+    }
+    .sectionOne__left {
+        order: 1;
+    }
+
+    .sectionFour__right {
+        order: 0;
+    }
+    .sectionFour__left {
+        order: 1;
+    }
+
+    .sectionFive__cards {
+        grid-template-columns: repeat(2,1fr);
+    } 
+}
+@media (max-width: 568px){
+    .sectionFive__cards {
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}
